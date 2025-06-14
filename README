@@ -1,0 +1,40 @@
+이름
+    @radiantbeing/eslint-config
+
+설명
+    JSLint에서 영감을 얻은 ESLint 구성
+
+설치
+    npm install --save-dev @radiantbeing/eslint-config
+
+사용법
+    // eslint.config.js
+    import {defineConfig} from "eslint/config";
+    import js from "@eslint/js";
+    import radiant from "./index.js";
+    import stylistic from "@stylistic/eslint-plugin";
+
+    export default Object.freeze(defineConfig([
+        {
+            extends: [
+                "js/recommended",
+                radiant.configs.js
+            ],
+            files: ["**/*.{js,mjs,cjs}"],
+            plugins: {js}
+        },
+        {
+            extends: [
+                "@stylistic/recommended",
+                radiant.configs.stylistic
+            ],
+            files: ["**/*.{js,mjs,cjs}"],
+            plugins: {"@stylistic": stylistic}
+        }
+    ]));
+
+작성자
+    김인화 <inhwa.kim@outlook.com>
+
+라이선스
+    MIT License
