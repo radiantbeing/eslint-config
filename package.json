@@ -1,6 +1,6 @@
 {
     "name": "@radiantbeing/eslint-config",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "JSLint에서 영감을 얻은 ESLint 구성",
     "main": "index.js",
     "type": "module",
