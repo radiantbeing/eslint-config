@@ -22,7 +22,6 @@
     },
     "homepage": "https://github.com/radiantbeing/eslint-config#readme",
     "devDependencies": {
-        "@eslint/js": "^9.29.0",
         "@stylistic/eslint-plugin": "^4.4.1",
         "eslint": "^9.29.0"
     },
