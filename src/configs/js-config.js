@@ -3,12 +3,12 @@ import {defineConfig} from "eslint/config";
 
 export default Object.freeze(defineConfig({
     plugins: {
-        custom: customPlugin
+        "@radiantbeing": customPlugin
     },
     rules: {
+        "@radiantbeing/freeze-default-export": "error",
         "arrow-body-style": ["error", "never"],
         "curly": ["error", "all"],
-        "custom/freeze-default-export": "error",
         "no-unused-vars": [
             "error",
             {caughtErrorsIgnorePattern: "^ignore"}
