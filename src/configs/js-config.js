@@ -9,11 +9,12 @@ export default Object.freeze(defineConfig({
         "@radiantbeing/freeze-default-export": "error",
         "arrow-body-style": ["error", "never"],
         "curly": ["error", "all"],
+        "no-dupe-keys": "error",
         "no-unused-vars": [
             "error",
             {caughtErrorsIgnorePattern: "^ignore"}
         ],
-        "sort-imports": "error",
-        "sort-keys": ["error", "asc"]
+        "sort-keys": ["error", "asc"],
+        "vars-on-top": "error"
     }
 }));

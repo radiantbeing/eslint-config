@@ -6,42 +6,35 @@ export default Object.freeze(defineConfig({
         "@stylistic": stylistic
     },
     rules: {
-        "@stylistic/arrow-parens": ["error", "always"],
-        "@stylistic/block-spacing": "off",
+        "@stylistic/array-bracket-newline": [
+            "error",
+            {"multiline": true}
+        ],
+        "@stylistic/arrow-parens": "error",
         "@stylistic/brace-style": [
             "error",
             "1tbs",
-            {allowSingleLine: true}
+            {allowSingleLine: false}
         ],
         "@stylistic/comma-dangle": ["error", "never"],
-        "@stylistic/indent": ["error", 4, {
-            ignoreComments: true,
-            ignoredNodes: [
-                "ConditionalExpression",
-                "TSUnionType",
-                "TSIntersectionType",
-                "TSTypeParameterInstantiation",
-                "FunctionExpression > .params[decorators.length > 0]",
-                "FunctionExpression > "
-                + ".params > "
-                + ":matches(Decorator, :not(:first-child))"
-            ],
-            offsetTernaryExpressions: false
-        }],
-        "@stylistic/max-len": ["error", {
-            code: 80,
-            comments: 80,
-            ignoreRegExpLiterals: true,
-            ignoreStrings: true,
-            ignoreTemplateLiterals: true,
-            ignoreUrls: true
-        }],
-        "@stylistic/max-statements-per-line": "off",
+        "@stylistic/indent": [
+            "error",
+            4,
+            {
+                ignoreComments: true,
+                offsetTernaryExpressions: false
+            }
+        ],
+        "@stylistic/max-len": [
+            "error",
+            {
+                code: 80,
+                comments: 80,
+                ignoreRegExpLiterals: true
+            }
+        ],
         "@stylistic/object-curly-spacing": ["error", "never"],
-        "@stylistic/operator-linebreak": ["error", "before"],
-        "@stylistic/padded-blocks": "off",
         "@stylistic/quotes": ["error", "double"],
-        "@stylistic/semi": ["error", "always"],
-        "@stylistic/spaced-comment": "off"
+        "@stylistic/semi": ["error", "always"]
     }
 }));
