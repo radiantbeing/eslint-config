@@ -5,7 +5,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "lint": "eslint ."
+        "lint:jslint": "JSLINT=$(which jslint | xargs realpath) && find . \\( -name '*.js' -o -name '*.cjs' -o -name '*.mjs' \\) -not -path './node_modules/*' -print0 | while IFS= read -r -d '' file; do node \"$JSLINT\" \"$file\"; done",
+        "lint:eslint": "eslint ."
     },
     "repository": {
         "type": "git",
@@ -27,5 +28,8 @@
     },
     "peerDependencies": {
         "eslint": ">= 9"
+    },
+    "devDependencies": {
+        "@jslint-org/jslint": "^2025.3.31"
     }
 }
