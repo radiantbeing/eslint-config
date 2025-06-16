@@ -21,7 +21,7 @@
         "url": "https://github.com/radiantbeing/eslint-config/issues"
     },
     "homepage": "https://github.com/radiantbeing/eslint-config#readme",
-    "devDependencies": {
+    "dependencies": {
         "@stylistic/eslint-plugin": "^4.4.1",
         "eslint": "^9.29.0"
     },
