@@ -34,8 +34,10 @@ export default Object.freeze(defineConfig({
                 ignoreRegExpLiterals: true
             }
         ],
+        "@stylistic/max-statements-per-line": "error",
         "@stylistic/object-curly-spacing": ["error", "never"],
         "@stylistic/quotes": ["error", "double"],
-        "@stylistic/semi": ["error", "always"]
+        "@stylistic/semi": ["error", "always"],
+        "@stylistic/semi-spacing": ["error", {"after": true, "before": false}]
     }
 }));
