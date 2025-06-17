@@ -38,6 +38,7 @@ export default Object.freeze(defineConfig({
         "@stylistic/object-curly-spacing": ["error", "never"],
         "@stylistic/quotes": ["error", "double"],
         "@stylistic/semi": ["error", "always"],
-        "@stylistic/semi-spacing": ["error", {"after": true, "before": false}]
+        "@stylistic/semi-spacing": ["error", {"after": true, "before": false}],
+        "@stylistic/space-infix-ops": "error"
     }
 }));
