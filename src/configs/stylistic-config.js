@@ -22,6 +22,7 @@ export default Object.freeze(defineConfig({
             4,
             {
                 ignoreComments: true,
+                ignoredNodes: ["ConditionalExpression"],
                 offsetTernaryExpressions: false
             }
         ],
