@@ -1,5 +1,5 @@
 import {defineConfig} from "eslint/config";
-import radiant from "./index.js";
+import radiant from "./src/index.js";
 
 export default Object.freeze(defineConfig({
     extends: [radiant.configs.recommended],
