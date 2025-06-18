@@ -1,13 +1,12 @@
-import customConfig from "./configs/custom-config.js";
-import jsConfig from "./configs/js-config.js";
-import stylisticConfig from "./configs/stylistic-config.js";
+import packageInfo from "../package.json" with {type: "json"};
+import recommended from "./configs/recommended.js";
 
 export default Object.freeze({
     configs: {
-        recommended: [
-            jsConfig,
-            stylisticConfig,
-            customConfig
-        ]
+        recommended
+    },
+    meta: {
+        name: packageInfo.name,
+        version: packageInfo.version
     }
 });

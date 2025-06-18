@@ -1,11 +1,17 @@
-import {defineConfig} from "eslint/config";
+import frozenDefaultExportRule from "../rules/frozen-default-export.js";
 import stylistic from "@stylistic/eslint-plugin";
 
-export default Object.freeze(defineConfig({
-    plugins: {
+export default Object.freeze({
+    plugins: Object.freeze({
+        "@radiantbeing": {
+            rules: {
+                "frozen-default-export": frozenDefaultExportRule
+            }
+        },
         "@stylistic": stylistic
-    },
-    rules: {
+    }),
+    rules: Object.freeze({
+        "@radiantbeing/frozen-default-export": "error",
         "@stylistic/array-bracket-newline": [
             "error",
             {"multiline": true}
@@ -39,6 +45,15 @@ export default Object.freeze(defineConfig({
         "@stylistic/quotes": ["error", "double"],
         "@stylistic/semi": ["error", "always"],
         "@stylistic/semi-spacing": ["error", {"after": true, "before": false}],
-        "@stylistic/space-infix-ops": "error"
-    }
-}));
+        "@stylistic/space-infix-ops": "error",
+        "arrow-body-style": ["error", "never"],
+        "curly": ["error", "all"],
+        "no-dupe-keys": "error",
+        "no-unused-vars": [
+            "error",
+            {caughtErrorsIgnorePattern: "^ignore"}
+        ],
+        "sort-keys": ["error", "asc"],
+        "vars-on-top": "error"
+    })
+});
