@@ -2,34 +2,37 @@
     "name": "@radiantbeing/eslint-config",
     "version": "0.0.4",
     "description": "JSLint에서 영감을 얻은 ESLint 구성",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "lint:jslint": "JSLINT=$(which jslint | xargs realpath) && find . \\( -name '*.js' -o -name '*.cjs' -o -name '*.mjs' \\) -not -path './node_modules/*' -print0 | while IFS= read -r -d '' file; do node \"$JSLINT\" \"$file\"; done",
-        "lint:eslint": "eslint ."
+    "keywords": [
+        "eslint",
+        "eslintconfig"
+    ],
+    "homepage": "https://github.com/radiantbeing/eslint-config#readme",
+    "bugs": {
+        "url": "https://github.com/radiantbeing/eslint-config/issues"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/radiantbeing/eslint-config.git"
     },
-    "keywords": [
-        "eslint",
-        "eslintconfig"
-    ],
-    "author": "김인화 <inhwa.kim@outlook.com>",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/radiantbeing/eslint-config/issues"
+    "author": "김인화 <inhwa.kim@outlook.com>",
+    "type": "module",
+    "main": "./index.js",
+    "scripts": {
+        "lint:eslint": "eslint .",
+        "lint:jslint": "JSLINT=$(which jslint | xargs realpath) && find . \\( -name '*.js' -o -name '*.cjs' -o -name '*.mjs' \\) -not -path './node_modules/*' -print0 | while IFS= read -r -d '' file; do node \"$JSLINT\" \"$file\"; done"
     },
-    "homepage": "https://github.com/radiantbeing/eslint-config#readme",
     "dependencies": {
         "@stylistic/eslint-plugin": "^4.4.1",
         "eslint": "^9.29.0"
     },
+    "devDependencies": {
+        "@jslint-org/jslint": "^2025.3.31"
+    },
     "peerDependencies": {
         "eslint": ">= 9"
     },
-    "devDependencies": {
-        "@jslint-org/jslint": "^2025.3.31"
+    "publishConfig": {
+        "access": "public"
     }
 }
