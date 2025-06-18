@@ -17,11 +17,19 @@
     "license": "MIT",
     "author": "김인화 <inhwa.kim@outlook.com>",
     "type": "module",
+    "exports": {
+        ".": {
+            "default": "./src/index.js",
+            "types": "./types/index.d.ts"
+        }
+    },
     "main": "./src/index.js",
+    "types": "./types/index.d.ts",
     "files": [
         "LICENSE",
         "README.md",
-        "src"
+        "src",
+        "types"
     ],
     "scripts": {
         "lint:eslint": "eslint .",
