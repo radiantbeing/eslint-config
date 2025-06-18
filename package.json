@@ -18,6 +18,11 @@
     "author": "김인화 <inhwa.kim@outlook.com>",
     "type": "module",
     "main": "./src/index.js",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "src"
+    ],
     "scripts": {
         "lint:eslint": "eslint .",
         "lint:jslint": "JSLINT=$(which jslint | xargs realpath) && find . \\( -name '*.js' -o -name '*.cjs' -o -name '*.mjs' \\) -not -path './node_modules/*' -print0 | while IFS= read -r -d '' file; do node \"$JSLINT\" \"$file\"; done"
